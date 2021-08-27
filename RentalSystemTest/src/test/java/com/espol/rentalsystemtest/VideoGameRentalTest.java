@@ -43,12 +43,11 @@ public class VideoGameRentalTest {
     @Test
     public void testGetDaysRented() {
         System.out.println("getDaysRented");
-        VideoGameRental instance = null;
-        int expResult = 0;
+        WiiGame game = new WiiGame("MarioBros");
+        VideoGameRental instance = new VideoGameRental(game,2,true);
+        int expResult = 2;
         int result = instance.getDaysRented();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -57,12 +56,11 @@ public class VideoGameRentalTest {
     @Test
     public void testGetVideoGame() {
         System.out.println("getVideoGame");
-        VideoGameRental instance = null;
-        Object expResult = null;
+        WiiGame game = new WiiGame("MarioBros");
+        VideoGameRental instance = new VideoGameRental(game,0,true);
+        Object expResult = game;
         Object result = instance.getVideoGame();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -71,12 +69,11 @@ public class VideoGameRentalTest {
     @Test
     public void testGetCharge() {
         System.out.println("getCharge");
-        VideoGameRental instance = null;
-        double expResult = 0.0;
+        WiiGame game = new WiiGame("MarioBros");
+        VideoGameRental instance = new VideoGameRental(game,3,true);
+        double expResult = game.getCharge(3, true);
         double result = instance.getCharge();
         assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -85,12 +82,11 @@ public class VideoGameRentalTest {
     @Test
     public void testGetFrequentRenterPoints() {
         System.out.println("getFrequentRenterPoints");
-        VideoGameRental instance = null;
-        int expResult = 0;
+        WiiGame game = new WiiGame("MarioBros");
+        VideoGameRental instance = new VideoGameRental(game,5,true);
+        int expResult = game.getFrequentRenterPoints(5, true);
         int result = instance.getFrequentRenterPoints();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }

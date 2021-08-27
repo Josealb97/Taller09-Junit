@@ -7,6 +7,14 @@ class Customer {
     public String _name;
     private final ArrayList<MovieRental> _movieRentals;
     private final ArrayList<VideoGameRental> _videoGameRental; 
+//Getters y Setters del String para poder hacer la prueba correcta
+    public String getName() {
+        return _name;
+    }
+
+    public void setName(String _name) {
+        this._name = _name;
+    }
     public Customer(String name) {
         this._videoGameRental = new ArrayList<>();
         this._movieRentals = new ArrayList<>();
